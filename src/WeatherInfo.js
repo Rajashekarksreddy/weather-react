@@ -1,7 +1,7 @@
 export default function WeatherInfo(props){
     return(
         <div>
-            <h1 className=" city">{props.data.city}</h1>
+            <h1 className=" font-bold text-orange-400 py-4">{props.data.city}</h1>
             <ul className=" list-none">
                 <li className=" py-4"> temperature: {props.data.temperature} </li>
 
