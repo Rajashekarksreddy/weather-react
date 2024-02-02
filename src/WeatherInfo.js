@@ -3,7 +3,7 @@ export default function WeatherInfo(props){
         <div>
             <h1 className=" city">{props.data.city}</h1>
             <ul className=" list-none">
-                <li> temperature: {props.data.temperature} </li>
+                <li className=" py-4"> temperature: {props.data.temperature} </li>
 
                 <br/>
 

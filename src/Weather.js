@@ -55,10 +55,10 @@ export default function Weather(){
                 type=" search"
                 placeholder=" type a city.."
                 onChange={handleCity}
-                className=' pr-10 focus:outline-none border border-cyan-800 py-3'
+                className=' pr-10 focus:outline-none border border-cyan-800 py-3 '
                 />
 
-           <button type=" submit" value='search' className=" search-btn w-20"> search</button>
+           <button type=" submit" value='search' className=" border rounded-md text-white bg-black py-2 px-2 "> search</button>
             </form>
 
             <WeatherInfo data={weatherData}/>
