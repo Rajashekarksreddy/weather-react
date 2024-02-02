@@ -1,10 +1,4 @@
 export default function WeatherInfo(props){
-
-    
-        let date = new Date(props.data.sunrise * 1000)
-        let day = date.getDay()
-        console.log(day)
-
     return(
         <div>
             <h1 className=" city">{props.data.city}</h1>
