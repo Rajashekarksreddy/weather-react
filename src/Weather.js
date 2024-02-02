@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import WeatherInfo from "./WeatherInfo"
-// import WatherForecast from "./WeatherForecast"
+import WatherForecast from "./WeatherForecast"
 
 
 
@@ -12,7 +12,7 @@ export default function Weather(){
     const [ city, setCity] = useState()
 
     function handleResponse(response){
-        console.log(response.data)
+        console.log(response.data.sys)
         setWeatherData({
             date: new Date (response.data.dt * 1000),
             time: new Date (response.data.dt * 1000),
@@ -24,7 +24,8 @@ export default function Weather(){
             description: response.data.weather[0].description,
             visibility:response.data.visibility,
             icon:response.data.weather[0].icon,
-            coord:response.data.coord,
+            coord:response.data.coord.lat,
+            sunrise:response.data.sys.sunrise,
 
         })
 
@@ -54,8 +55,8 @@ export default function Weather(){
                 <input 
                 type=" search"
                 placeholder=" type a city.."
-                className=" search-bar w-80"
                 onChange={handleCity}
+                className=' pr-10 focus:outline-none border border-cyan-800 py-3'
                 />
 
            <button type=" submit" value='search' className=" search-btn w-20"> search</button>
